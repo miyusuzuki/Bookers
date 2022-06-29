@@ -1,6 +1,10 @@
 <body>
- <p id="notice"></p>
-
+ <% if flash[:notice] %>
+  <p id="notice">
+ 
+   <%= flash[:notice] %>
+  </p> 
+ <% end %>  
  <p>
    <strong>Title:</strong>
    <%= @book.title %>
@@ -11,7 +15,7 @@
    <%= @book.body %>
  </p>
  
- <a href="/books/#{book.id}/edit">Eidt</a>
+ <a class="edit_path(book.id)" href="/books/#{book.id}/edit">Edit</a> 
   |
  <a href="/books">Back</a>
 </body>
