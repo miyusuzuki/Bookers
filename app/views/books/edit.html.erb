@@ -25,7 +25,7 @@
    <%= f.submit 'Update Book' %>
   </div>
  <% end %>
- <a href="/books/#{book.id}">Show</a>
+ <%= link_to 'Show', "/books/#{@book.id}" %>
   |
- <a href="/books">Back</a>
+ <%= link_to 'Back', "/books" %>
 </body>
